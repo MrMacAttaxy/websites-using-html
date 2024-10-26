@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png" id="favicon">
+    <title>Settings</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Darker background for contrast */
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+        .container {
+            text-align: center;
+            background-color: #282828; /* Darker box for the settings */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 250px; /* Set a fixed width for the container */
+        }
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            border: none;
+            background: none;
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s; /* Smooth button hover effect */
+            padding: 10px;
+            border-radius: 8px; /* Rounded corners for buttons */
+            width: 100%; /* Full width of the container */
+        }
+        button:hover {
+            transform: scale(1.1); /* Slightly enlarge button on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Shadow effect on hover */
+        }
+        img {
+            width: 32px; /* Adjust the size of the favicon image */
+            height: 32px;
+        }
+        #resetButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d9534f; /* Bootstrap danger color */
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 100%; /* Full width of the container */
+        }
+        #resetButton:hover {
+            background-color: #c9302c; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+        <div class="button-wrapper">
+            <button id="googleButton" data-title="Google" data-favicon="https://www.google.com/s2/favicons?domain=google.com">
+                <img src="https://www.google.com/s2/favicons?domain=google.com" alt="Google">
+                <span>Google</span>
+            </button>
+            <button id="outlookButton" data-title="Outlook" data-favicon="https://www.google.com/s2/favicons?domain=outlook.com">
+                <img src="https://www.google.com/s2/favicons?domain=outlook.com" alt="Outlook">
+                <span>Outlook</span>
+            </button>
+        </div>
+        <button id="resetButton">Reset to Default</button>
+    </div>
+
+    <script src="sharedjsfile.js"></script>
+</body>
+</html>
