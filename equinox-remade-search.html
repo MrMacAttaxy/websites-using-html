@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>Home</title>
+    <style>
+        html {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            background-image: url("background.jpg");
+            background-position: 100px 100px 100px 100px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #input-search-bar {
+            margin-top: 30px;
+            width: 30%;
+            border-radius: 0vh 1vh 1vh 0vh;
+            background-color: black;
+            color: grey;
+            height: 30px;
+            border-width: 1px 1px 1px 0px;
+        }
+        #iframe-window {
+            width: 100%;
+            height: 780px;
+        }
+        @keyframes spin {
+            0% {transform: rotate(90deg);}
+            100% {transform: rotate(360deg);}
+        }
+        #logo {
+            animation: spin 23s infinite linear;
+            margin-top: 150px;
+        }
+        button {
+            border-width: 1px 0px 1px 1px;
+            background: 0;
+            color: white;
+            height: 35px;
+            border-radius: 1vh 0vh 0vh 1vh;
+        }
+        .preset-button {
+            background-color: black;
+            border-radius: 2vh;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="main">
+            <img id="logo" src="logo.png" alt="Logo">
+            <br />
+            <button id="run-proxy" onclick="proxyshow(proxyUrlValue.value);">
+                Q
+            </button>
+            <input id="input-search-bar" class="input" type="text" placeholder="Search the web or enter a URL" />
+            </button>
+            <br />
+            <button class="btn-preset" id="tik-tok">
+                Tiktok
+            </button>
+        </div>
+    </center>
+</body>
+</html>
+<script>
+const proxyUrlValue = document.getElementById("input-search-bar");
+const iframeWindow = document.getElementById("iframe-window");
+
+function proxyshow(url) {
+    if (url.includes("google.com")) {
+        document.location.href = "https://google.com/webhp?igu=1";
+    } else if (!url.includes("https://")) {
+        if (!url.includes(".")) {
+            document.location.href = "https://google.com/search?q=" + url + "&sca_esv=7786c63c048a012b&igu=1&source=hp&ei=3OAaZ-rEB6XcwN4PooOwoAU&iflsig=AL9hbdgAAAAAZxru7AlOthIM4ZmzZjZxYTIRyiYJRIQW&ved=0ahUKEwjqotuMnqiJAxUlLtAFHaIBDFQQ4dUDCBE&uact=5&oq=hello&gs_lp=Egdnd3Mtd2l6IgVoZWxsbzIIEC4YgAQYsQMyCBAuGIAEGLEDMhMQLhiABBixAxjRAxjHARiKBRgKMg4QLhiABBixAxjRAxjHATILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyBBAAGAMyCBAuGIAEGLEDSJcVUABY0g1wAHgAkAEAmAFfoAGiA6oBATW4AQPIAQD4AQGYAgWgAt4DwgILEC4YgAQY0QMYxwHCAgUQABiABMICBRAuGIAEwgILEC4YgAQYsQMYgwHCAg4QLhiABBixAxiDARjUApgDAJIHAzMuMqAH0Ug&sclient=gws-wiz&safe=active&ssui=on";
+        } else {
+            document.location.href = "https://" + url + "?from=homescreen_icon&iv_load_policy=3&rel=0&fs=&end=&GEtNGE4Zi05NWJh=";
+        }
+    } else if (url.includes("youtube.com")) {
+            document.location.href = proxyUrlValue.value.replace("https://youtube.com/watch?v=", "https://youtube-nocookie.com/embed/");
+    } else {
+        document.location.href = url;
+    }
+}
+</script>
