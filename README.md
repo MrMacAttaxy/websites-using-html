@@ -2,5 +2,6 @@
 This project is made by for Google Sites and Vercel. Should work with other hosting platforms.
 <h1>What do we have?</h1>
 <p>
-  Moonlight
+  Moonlight 3.0
+  Equinox From Scratch
 </p>
