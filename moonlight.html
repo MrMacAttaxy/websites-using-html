@@ -442,7 +442,24 @@ volume_up
 </div>
         </div>
         <script src="https://howtoscratch.info/src/js/index.js"></script>
-        <script src="https://howtoscratch.info/src/js/iconloader.js"></script>
+        <script>
+             if (localStorage.getItem("favicon") === null) {
+    document.getElementById("favicon").href = "https://howtosratch.info/src/static/images/moon-light-moon-background.png"
+} else {
+    document.getElementById("favicon").href = localStorage.getItem("favicon");
+}
+
+if (localStorage.getItem("title") === null) {
+    document.getElementById("title").innerHTML = "Moonlight"
+} else {
+    document.getElementById("title").innerHTML = localStorage.getItem("title");
+}
+
+if (localStorage.getItem("lightmodetoggle") == 1) {
+    document.getElementById("header").style.filter = "invert()";
+    document.getElementById("footer").style.filter = "invert()";
+}
+        </script>
         
 
 </body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20231207/r20190131/zrt_lookup_fy2021.html" style="display: none;"></iframe></html>
